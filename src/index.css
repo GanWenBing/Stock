@@ -1,0 +1,45 @@
+.StockIcon{
+    font-size: 40px;
+    position: absolute;
+    left: 65px;
+}
+
+.tableColor{
+    color: red;
+}
+
+tbody:nth-child(odd){
+    background-color: Azure;
+    width: 400px;
+    height: 50px;
+  }
+
+.removeButton{
+    font-size: 20px;
+    position: absolute;
+}
+
+.list-group-item{
+    font-size: 15px;
+}
+
+.list-group-item:nth-child(odd){
+    background-color: WhiteSmoke;
+    
+  }
+
+.searchbar{
+    background-color: HoneyDew;
+    height: 100px;
+}
+
+.stockWatchlist{
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    background-color: Gainsboro;
+}
+
+.stockfontsize{
+    font-size: 15px;
+}
