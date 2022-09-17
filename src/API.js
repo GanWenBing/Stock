@@ -18,7 +18,6 @@ export const Endpoint = (symbol) =>`https://www.alphavantage.co/query?function=S
 //TIME_SERIES_DAILY_ADJUSTED, TIME_SERIES_WEEKLY,TIME_SERIES_WEEKLY_ADJUSTED,TIME_SERIES_MONTHLY
 
 
-// https://data.nasdaq.com/api/v3/datasets/WIKI/FB/data.json?api_key=HGLs96xv8LaPBxt-cvxd
 
 // alphavantage
 
