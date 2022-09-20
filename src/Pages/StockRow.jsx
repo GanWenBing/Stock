@@ -18,8 +18,6 @@ export default class StockRow extends React.Component {
     }
 
     componentDidMount() {
-        // console.log(this.state.list.stock)
-        // this.state.list.stock((d)=><h6>{d}</h6>)
         //API 
         let stockLowestPrice = []
         let stockHighestPrice = [];
@@ -82,23 +80,6 @@ export default class StockRow extends React.Component {
 
 }
 
-// {this.state.list.stock.map((item,index)=><tbody>
-            // <tr>
-            //     <td>{this.props.ticker}</td>
-            //     <td>{this.state.Highest}</td>
-            //     <td>{this.state.Lowest}</td>
-            //     <td>{this.state.Open}</td>
-            //     <td>{this.state.Close}</td>
-            //     <td>{this.state.Difference > 0 ? (<IconContext.Provider value={{ color: "green", className: "global-class-name" }}>
-            //         {this.state.Difference}%
-            //             <AiOutlineArrowUp />
-            //         </IconContext.Provider>) : (<IconContext.Provider value={{ color: "red", className: "global-class-name" }}>
-            //         {this.state.Difference}%
-            //             <AiOutlineArrowDown />
-            //         </IconContext.Provider>)}
-            //     </td>
-            //     <td onClick={()=>this.state.list.handclick(this.state.list.ticker)} ><AiOutlineMinusCircle/></td>
-            // </tr>
-            // </tbody>)}
+
 
 

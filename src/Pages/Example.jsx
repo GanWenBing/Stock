@@ -1,10 +1,5 @@
 
 import React, { useState } from 'react'
-import { Timechart } from '../API'
-import { useEffect } from 'react'
-import { PureComponent } from 'react';
-// import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Plot from 'react-plotly.js';
 
 const Example = (props) => {

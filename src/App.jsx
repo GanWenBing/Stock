@@ -8,11 +8,6 @@ import MarketLayout from './Nav/MarketLayout'
 import Favourite from './Pages/Favourite'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Spinner from 'react-bootstrap/Spinner';
-import Slide from './Pages/Slide'
-
-
-
-
 
 
 function App() {

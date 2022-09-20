@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Newssentiment } from '../API';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 const Homepage = () => {
 
@@ -16,7 +17,9 @@ const Homepage = () => {
               .then((response) => response.json())
               .then((data) =>
                 // console.log(data.feed)
-              {SetNews(data.feed);
+              {
+              SetNews(data.feed);
+                
               // const Arrayofnews = data.feed;
               // Arrayofnews.map((e)=>{console.log(e.title)})
               
@@ -32,8 +35,8 @@ const Homepage = () => {
   
   return (
     <>
-  
-    <div style={{backgroundColor:'rgb(102,102,102)'}}>
+    
+    <div style={{backgroundColor:'black'}}>
     <Row xs={1} md={3} className="g-4">
       {news.map((e, idx) => (
         <Col>
@@ -53,6 +56,7 @@ const Homepage = () => {
       ))}
     </Row>
     </div>
+
     
     </>
   
