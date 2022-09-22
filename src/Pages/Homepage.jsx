@@ -10,35 +10,38 @@ import Spinner from 'react-bootstrap/Spinner';
 const Homepage = () => {
 
   const [news, SetNews] = useState([]);
+  const [status, setStatus] = useState("idle");
   
 
   const fetchNewsData = async () => {
+            setStatus("loading");
             await fetch(Newssentiment('AAPL'))
               .then((response) => response.json())
               .then((data) =>
                 // console.log(data.feed)
               {
+              setStatus("done");
               SetNews(data.feed);
-                
+              
               // const Arrayofnews = data.feed;
               // Arrayofnews.map((e)=>{console.log(e.title)})
               
-           })}
+           }
+           )}
         
   useEffect(() =>{
     fetchNewsData();
   },[]);
 
-  
-  
-  
-  
   return (
     <>
-    
+     {status === "loading" ? 
+     <div className='HomepageSpinner'>
+      <Spinner animation="border" variant="dark"/>
+     </div>:
     <div style={{backgroundColor:'black'}}>
     <Row xs={1} md={3} className="g-4">
-      {news.map((e, idx) => (
+      {news.map((e, index) => (
         <Col>
           <Card bg={'light'}>
             <Card.Img variant="top" src={e["banner_image"]} />
@@ -56,6 +59,7 @@ const Homepage = () => {
       ))}
     </Row>
     </div>
+}
 
     
     </>

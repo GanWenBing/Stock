@@ -18,7 +18,6 @@ function App() {
   const RemoveFromList = (index) => {
     const Arr = list.filter( (d,i) => i !== index )
     setList(Arr)
-    
   }
 
 

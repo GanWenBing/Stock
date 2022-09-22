@@ -43,3 +43,10 @@ tbody:nth-child(odd){
 .stockfontsize{
     font-size: 15px;
 }
+
+.HomepageSpinner{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
