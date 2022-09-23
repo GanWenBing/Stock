@@ -1,7 +1,7 @@
 .StockIcon{
     font-size: 40px;
     position: absolute;
-    left: 65px;
+    left: 3%;
 }
 
 .tableColor{
@@ -9,9 +9,9 @@
 }
 
 tbody:nth-child(odd){
-    background-color: Azure;
+    background-image: linear-gradient(to right, #92988f 0%, #e4e4d7  51%, #b4beae 100%);
     width: 400px;
-    height: 50px;
+    height: 30px;
   }
 
 .removeButton{
@@ -24,20 +24,23 @@ tbody:nth-child(odd){
 }
 
 .list-group-item:nth-child(odd){
-    background-color: WhiteSmoke;
-    
+    background-image: linear-gradient(to right, #c4c8c2 0%, #e4e4d9  51%, #838b7f  100%);    
   }
 
 .searchbar{
-    background-color: HoneyDew;
+    background-image: linear-gradient(to right, #215f00 0%, #e4e4d9  51%, #215f00  100%);
     height: 100px;
 }
 
 .stockWatchlist{
-    height: 50px;
+    height: 80px;
     text-align: center;
-    font-size: 30px;
-    background-color: Gainsboro;
+    text-transform: uppercase;
+    font-size: 50px;
+    background-image: linear-gradient(to right, #215f00 0%, #e4e4d9  51%, #215f00  100%);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.526);
+    color: rgba(0,0,0,0.6);
+    
 }
 
 .stockfontsize{
@@ -50,3 +53,32 @@ tbody:nth-child(odd){
     left: 50%;
     top: 50%;
 }
+
+.centerChart{
+    position: absolute;
+    left: 25%;  
+}
+
+.stockSymbol{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+
+/* .searchInput{
+    margin: auto;
+    position: absolute;
+    left: 10%;
+} */
+
+         
+         
+         
+
+ 

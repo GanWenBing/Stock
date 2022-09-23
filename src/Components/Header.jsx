@@ -11,9 +11,11 @@ const Header = () => {
   const navigateTo = useNavigate();
 
   return (
+
    <Navbar bg="dark" variant="dark">
-    <AiOutlineStock className='StockIcon' style={{backgroundColor:'white'}}/>
+    {/* <AiOutlineStock className='StockIcon' style={{backgroundColor:'white'}}/> */}
     <Container>
+      <AiOutlineStock className='StockIcon' style={{backgroundColor:'white'}}/>
       <Navbar.Brand onClick={()=>navigateTo('/')}>Stock Market</Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">

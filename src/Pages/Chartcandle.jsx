@@ -17,9 +17,9 @@ const Chartcandle = (props) => {
         var trace1 ={
             x:stockChartXValues.reverse(),
             close:stockChartClosedValues.reverse(),
-            decreasing: {line: {color: '#7F7F7F'}},
+            decreasing: {line: {color: 'red'}},
             high:stockChartHighValues.reverse(),
-            increasing: {line: {color: 'red'}},
+            increasing: {line: {color: 'green'}},
             line: {color: 'rgba(31,119,180,1)'},
             low:stockChartLowValues.reverse(),
             open:stockChartOpenValues.reverse(),
@@ -27,6 +27,7 @@ const Chartcandle = (props) => {
             xaxis: 'x', 
             yaxis: 'y' 
         }
+        //console.log(trace1.x1[trace1.x1.length-1])
       }
     
     return (
@@ -39,14 +40,19 @@ const Chartcandle = (props) => {
               r: 10, 
               t: 25, 
               b: 40, 
-              l: 60
-            }, 
+              l: 50
+            },
+            width: 720, 
+            height: 440,
+            title: 'Stock Market',
             showlegend: false, 
+            plot_bgcolor: "white",
+            paper_bgcolor: "HoneyDew",
             xaxis: {
               autorange: true, 
               domain: [0, 1], 
-              range: [trace1.x?.[0], trace1.x?.[trace1.x.length-1]], 
-              rangeslider: {range: [trace1.x?.[0], trace1.x?.[trace1.x.length-1]]}, 
+              range: [trace1?.x?.[0], trace1?.x?.[trace1.x.length-1]], 
+              rangeslider: {range: [trace1?.x?.[0], trace1?.x?.[trace1.x.length-1]]}, 
               title: 'Date', 
               type: 'date'
             }, 

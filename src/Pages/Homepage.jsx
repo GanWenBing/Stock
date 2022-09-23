@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import { Newssentiment } from '../API';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Spinner from 'react-bootstrap/Spinner';
+import Button from 'react-bootstrap/Button';
 
 const Homepage = () => {
 
@@ -50,7 +51,8 @@ const Homepage = () => {
               <Card.Text>
                 {e.summary}
               </Card.Text>
-              <Card.Link href={e.url}>Go</Card.Link>
+              <Button variant="primary" onClick={()=>window.open(e.url)}>Go </Button>
+              {/* <Card.Link href={e.url}>Go</Card.Link> */}
               {/* <Button variant="primary" onClick={(e)=>{e.url
               console.log(e.url)}}>Go</Button> */}
             </Card.Body>

@@ -8,10 +8,10 @@ import Plot from 'react-plotly.js';
 
 
 const Chart = (props) => {
-  //console.log(props)
+  
   const stockChartXValues = [];
     const stockChartYValues= [];
-    //console.log(props)
+    
 
     for (var key in props.stock['Time Series (Daily)']) {
         stockChartXValues.push(key);
@@ -31,7 +31,8 @@ const Chart = (props) => {
                 marker: {color: 'red'},
               }
             ]}
-            layout={{width: 720, height: 440, title: 'Stock Market'}}
+            layout={{width: 720, height: 440, title:' Stock Market', plot_bgcolor: "white",
+            paper_bgcolor: "HoneyDew"}}
           />
           </>
         )

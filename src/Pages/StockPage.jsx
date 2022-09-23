@@ -11,6 +11,11 @@ import Spinner from 'react-bootstrap/Spinner';
 import Dropdown from 'react-bootstrap/Dropdown';
 import debounce from 'lodash.debounce';
 import Chartcandle from './Chartcandle';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import { LineChart } from 'recharts';
+
+
 
 
 export default class StockPage extends React.Component {
@@ -56,7 +61,7 @@ export default class StockPage extends React.Component {
                   const ArraysofData = data.bestMatches.map(f => [f['1. symbol'] + "," + f['2. name']])
                   // console.log(ArraysofData)
                   const FlatArray = [].concat(...ArraysofData);
-                  console.log(FlatArray)
+                  //console.log(FlatArray)
                   this.setState({ dataSource: FlatArray });
               })
       },500);
@@ -103,9 +108,9 @@ export default class StockPage extends React.Component {
               this.setState({button:'In your Watchlist'})
             }
             // this.state.list[this.state.list.length]=this.state.search.split(',')[0];
-            console.log(this.state.list)           
+            //console.log(this.state.list)           
          }
-         console.log(this.state.list)
+         //console.log(this.state.list)
           
          
     const handleSearch = e => {
@@ -142,27 +147,27 @@ export default class StockPage extends React.Component {
       }
       }
     
-    const handleLineChart = () =>{
-      this.setState({
-        charttype:
-          <Chart stock={this.state.chart} /> 
-      })
-    }
+    // const handleLineChart = () =>{
+    //   this.setState({
+    //     charttype:
+    //       <Chart stock={this.state.chart} /> 
+    //   })
+    // }
 
-    const handleCandleStick = () =>{
-      this.setState({
-        charttype:
-          <Chartcandle stock={this.state.chart}/>
-      })
-    }
+    // const handleCandleStick = () =>{
+    //   this.setState({
+    //     charttype:
+    //       <Chartcandle stock={this.state.chart}/>
+    //   })
+    // }
 
     return (
     <>
       <div className='searchbar'>
-        <h4>Stock market symbols,names</h4>       
+        <h4 className='stockSymbol'>Stock market symbols,names</h4>       
         <AutoComplete
           style={{ width: "90%" }}
-          className="d"
+          className="searchInput"
           value={this.state.search}
           option={this.state.dataSource}
           onChange={handleSearch}
@@ -193,11 +198,32 @@ export default class StockPage extends React.Component {
                   <ListGroup.Item>Average: $ {this.state.info["200DayMovingAverage"]}</ListGroup.Item>
                   </ListGroup>
                   <br></br>
-                  <Button onClick={handleLineChart}>Line Chart</Button>{' '}
-                  <Button onClick={handleCandleStick}>CandleStick</Button>
-                  <div>
+                  {/* <Button onClick={handleLineChart}>Line Chart</Button>{' '}
+                  <Button onClick={handleCandleStick}>CandleStick</Button> */}
+                  <Tabs
+                  defaultActiveKey="home"
+                  id="fill-tab-example"
+                  className="mb-3"
+                  fill
+                  // defaultActiveKey="home"
+                  // transition={false}
+                  // id="noanim-tab-example"
+                  // className="mb-2"
+                  >
+                  <Tab eventKey="home" title="LineChart">
+                    <div className='centerChart'>
+                    <Chart stock={this.state.chart} /> 
+                    </div>
+                  </Tab>
+                  <Tab eventKey="profile" title="CandleStick Chart">
+                    <div className='centerChart'>
+                    <Chartcandle stock={this.state.chart}/>
+                    </div>
+                  </Tab>
+                  </Tabs>
+                  {/* <div>
                     {this.state.charttype}
-                  </div>
+                  </div> */}
                   {/* <Chart stock={this.state.chart} /> */}
                   </>
                   )}

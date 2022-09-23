@@ -9,10 +9,11 @@ const Favourite = (props) => {
 
 
   return (<main>
-    <div className='tableColor'>
-      
-      <h3 className='stockWatchlist'>My Stock Watchlist</h3>
-      <Table >
+    <div className='stockWatchlist'>     
+      My Stock Watchlist
+      </div>
+      <div>
+      <Table striped bordered hover size="sm">
       <thead className='tableCustom'>
         <tr>
           <th>Symbol</th>

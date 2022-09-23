@@ -12,7 +12,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
   
-  const [list, setList] = useState(['AAPL', 'TSLA', 'GOOG' ])
+  const [list, setList] = useState(['AAPL', 'GOOG' ])
   
 
   const RemoveFromList = (index) => {
